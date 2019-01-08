@@ -1,0 +1,10 @@
+{
+  "name": "data-structure-utilities",
+  "version": "1.0.0",
+  "description": "A utility library that does all the data structure lifting for you.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/jacklaurencegaray/data-structure-utilities",
+  "author": "Jack Laurence Garay",
+  "license": "MIT",
+  "private": false
+}
