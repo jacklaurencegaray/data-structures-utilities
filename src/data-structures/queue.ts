@@ -1,23 +1,21 @@
-export class Queue<T> {
-  queue: T[] = []
+export default class Queue<T> {
+  queue: T[] = [];
 
   constructor(initialQueue: T[] = []) {
-    this.queue = [...initialQueue]
+    this.queue = [...initialQueue];
   }
 
   enqueue(element) {
-    this.queue.push(element)
+    this.queue.push(element);
   }
 
-  dequeue() {
-    if (!this.queue.length) {
-      console.warn("Cannot dequeue from an empty queue.")
-      return
+  deque() {
+    if (this.queue.length) {
+      return this.queue.shift();
     }
-    return this.queue.shift()
   }
 
   preview() {
-    return [...this.queue]
+    return [...this.queue];
   }
 }
