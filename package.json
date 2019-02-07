@@ -27,5 +27,8 @@
     "prettier": "^1.18.2",
     "prettierrc": "^0.0.0-5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "testRegex": "tests/.*\\.(js|jsx)$"
+  }
 }
