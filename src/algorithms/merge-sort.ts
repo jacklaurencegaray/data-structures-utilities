@@ -1,3 +1,1 @@
-function mergeSort(...arr) {}
-
-export default mergeSort;
+export default function mergeSort(...arr) {}
