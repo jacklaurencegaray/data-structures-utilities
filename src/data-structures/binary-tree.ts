@@ -10,7 +10,9 @@ export class BinaryTree<T> {
   }
 
   static build(values: unknown[]) {
-    values.forEach(value => {});
+    values.forEach(value => {
+      // TODO: Fix this!
+    });
   }
 
   insert(value: T) {
