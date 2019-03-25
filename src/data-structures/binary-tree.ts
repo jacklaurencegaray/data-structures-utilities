@@ -9,6 +9,7 @@ export class BinaryTree<T> {
     this.data = value;
   }
 
+  // TODO: Typing here!
   static build(values: unknown[]) {
     values.forEach(value => {
       // TODO: Fix this!
