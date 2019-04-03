@@ -6,6 +6,8 @@ import radixSort from "../radix-sort";
 const generateRandomFromRange = (min, max) =>
   Math.floor(Math.random() * max - min);
 
+const comparator = (a, b) => a - b;
+
 describe("Sorting algorithms sort numbers correctly", () => {
   const arrLength = generateRandomFromRange(0, 100);
   const maxNumberValue = generateRandomFromRange(0, 10000);
@@ -24,10 +26,10 @@ describe("Sorting algorithms sort numbers correctly", () => {
     unsortedArr.push(generateRandomFromRange(0, maxNumberValue));
 
   it("Merge sort: sorts correctly", () => {
-    expect(mergeSort(unsortedArr)).toEqual(quickSort(unsortedArr));
+    expect(mergeSort(unsortedArr)).toEqual(unsortedArr.sort(comparator));
   });
 
   it("Quick sort: sorts correctly", () => {
-    expect(quickSort(unsortedArr)).toEqual(unsortedArr.sort());
+    expect(quickSort(unsortedArr)).toEqual(unsortedArr.sort(comparator));
   });
 });
