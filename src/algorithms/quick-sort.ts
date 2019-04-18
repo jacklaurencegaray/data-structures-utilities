@@ -1,4 +1,4 @@
-export default function sort(arr) {
+export default function sort(...arr) {
   const newArr = arr.slice();
   quickSort(newArr, 0, newArr.length - 1);
   return newArr;
