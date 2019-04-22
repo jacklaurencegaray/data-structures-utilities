@@ -3,21 +3,28 @@ import mergeSort from "../merge-sort";
 import quickSort from "../quick-sort";
 import radixSort from "../radix-sort";
 
+const generateRandomFromRange = (min, max) =>
+  Math.floor(Math.random() * max - min);
+
 describe("Sorting algorithms sort numbers correctly", () => {
-  const maxArrLength = 100;
-  const maxNumberValue = 100000;
+  const arrLength = generateRandomFromRange(0, 100);
+  const maxNumberValue = generateRandomFromRange(0, 10000);
   const unsortedArr = [];
 
-  // Generate random length for array
-  const arrLength = Math.floor(Math.random() * maxArrLength);
+  // Utility function generates a number within the range
+  it("generateRandomNumberFromRange generates random number within range", () => {
+    const randomNumber = generateRandomFromRange(0, 1000);
+    expect(randomNumber).toBeGreaterThanOrEqual(0);
+    expect(randomNumber).toBeLessThanOrEqual(1000);
+  });
 
   // Create new unsorted array with random elements
   // with the newly created random length
   for (let i = 0; i < arrLength; i++)
-    unsortedArr.push(Math.floor(Math.random() * maxNumberValue));
+    unsortedArr.push(generateRandomFromRange(0, maxNumberValue));
 
   it("Merge sort: sorts correctly", () => {
-    expect(mergeSort(unsortedArr)).toEqual(unsortedArr.sort());
+    expect(mergeSort(unsortedArr)).toEqual(quickSort(unsortedArr));
   });
 
   it("Quick sort: sorts correctly", () => {
