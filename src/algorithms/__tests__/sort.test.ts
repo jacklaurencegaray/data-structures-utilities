@@ -32,4 +32,8 @@ describe("Sorting algorithms sort numbers correctly", () => {
   it("Quick sort: sorts correctly", () => {
     expect(quickSort(unsortedArr)).toEqual(unsortedArr.sort(comparator));
   });
+
+  it("Count sort: sorts correctly", () => {
+    expect(countingSort(unsortedArr)).toEqual(unsortedArr.sort(comparator));
+  });
 });
