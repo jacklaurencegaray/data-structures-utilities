@@ -5,8 +5,8 @@ function merge(leftArr, rightArr) {
     if (leftArr[0] <= rightArr[0]) sortedArr.push(leftArr.shift());
     else sortedArr.push(rightArr.shift());
 
-  sortedArr = [...sortedArr, ...leftArr];
-  sortedArr = [...sortedArr, ...rightArr];
+  sortedArr.push(...leftArr);
+  sortedArr.push(...rightArr);
 
   return sortedArr;
 }
