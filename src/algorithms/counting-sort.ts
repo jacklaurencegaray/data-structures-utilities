@@ -1,4 +1,4 @@
-export default function countingSort(...arr) {
+export default function countingSort([...arr]) {
   let n = arr.length;
   const occurrencesArr = new Array(n).fill(0);
   const accumulationArr = new Array(n).fill(0);
@@ -14,7 +14,8 @@ export default function countingSort(...arr) {
   accumulationArr.pop();
 
   for (let i = 0; i < n; i++) {
-    sortedArr[accumulationArr[arr[i]]] = arr[i];
-    accumulationArr[arr[i]]++;
+    sortedArr[accumulationArr[arr[i]]++] = arr[i];
   }
+
+  return sortedArr;
 }
