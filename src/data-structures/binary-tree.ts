@@ -10,4 +10,12 @@ export class BinaryTree<T> {
   static build(values: unknown[]) {
     values.forEach(value => {});
   }
+  
+  insert(value: T) {
+    if (value <= this.data) {
+      this.left.insert(value);
+    } else if (value > this.data {
+      this.right.insert(value);           
+    }
+  }
 }
