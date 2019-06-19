@@ -13,9 +13,19 @@ export class BinaryTree<T> {
   
   insert(value: T) {
     if (value <= this.data) {
-      this.left.insert(value);
-    } else if (value > this.data {
-      this.right.insert(value);           
+      if (this.left) { 
+        this.left.insert(value);
+      } else {
+        this.left = new BinaryTree<T>(value); 
+      }
+    } else if (value > this.data) {
+       if (this.right) {
+        this.right.insert(value);           
+       } else {
+        this.right = new BinaryTree<T>(value); 
+       }
     }
   }
+
+
 }
