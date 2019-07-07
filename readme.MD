@@ -7,3 +7,10 @@ Counting Sort
 Merge Sort
 Quick Sort
 Radix Sort
+
+### Data Structures
+
+Binary Tree
+Priority Queue (Heap)
+Queue
+Stack
