@@ -6,7 +6,7 @@ This repository is a collection of data structures and algorithm implementations
 Counting Sort
 Merge Sort
 Quick Sort
-Radix Sort
+Radix Sort - Progress
 
 ### Data Structures
 
