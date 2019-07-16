@@ -1,12 +1,12 @@
 function merge(leftArr, rightArr) {
-  const sortedArr = [];
+  let sortedArr = [];
 
   while (leftArr.length && rightArr.length)
     if (leftArr[0] <= rightArr[0]) sortedArr.push(leftArr.shift());
     else sortedArr.push(rightArr.shift());
 
-  while (leftArr.length) sortedArr.push(leftArr.shift());
-  while (rightArr.length) sortedArr.push(rightArr.shift());
+  sortedArr = [...sortedArr, ...leftArr];
+  sortedArr = [...sortedArr, ...rightArr];
 
   return sortedArr;
 }
