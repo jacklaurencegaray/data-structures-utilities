@@ -3,14 +3,14 @@
 This repository is a collection of data structures and algorithm implementations.
 
 ### Sorting Algorithms
-Counting Sort - Progress
-Merge Sort
-Quick Sort
-Radix Sort - Progress
+Counting Sort - Progress<br />
+Merge Sort<br />
+Quick Sort<br />
+Radix Sort - Progress<br />
 
 ### Data Structures
 
-Binary Tree
-Priority Queue (Heap)
-Queue
-Stack
+Binary Tree<br />
+Priority Queue (Heap)<br />
+Queue<br />
+Stack<br />
