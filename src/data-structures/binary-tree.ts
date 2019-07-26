@@ -1,4 +1,4 @@
-// TODO: Fix this
+export type Comparator = (...args: any[]) => boolean
 
 export class BinaryTree<T> {
   left: BinaryTree<T>;
@@ -8,27 +8,18 @@ export class BinaryTree<T> {
   constructor(value: T) {
     this.data = value;
   }
-
-  // TODO: Typing here!
-  static build(values: unknown[]) {
-    values.forEach(value => {
-      // TODO: Fix this!
-    });
-  }
-
+  
   insert(value: T) {
-    if (value <= this.data) {
-      if (this.left) {
-        this.left.insert(value);
-      } else {
-        this.left = new BinaryTree<T>(value);
-      }
-    } else if (value > this.data) {
-      if (this.right) {
-        this.right.insert(value);
-      } else {
-        this.right = new BinaryTree<T>(value);
-      }
-    }
+    
+  }
+  
+  static build(arr: T[], comparator: Comparator) {
+     if (arr.length) {
+        const root = new BinaryTree<T>(arr[0]);
+        arr.slice(1, arr.length).forEach(val => root.insert(val));
+        return root;
+     } else {
+       throw new Error("Cannot build a BST from an empty array.");
+     }
   }
 }
