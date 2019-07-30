@@ -1,3 +1,5 @@
+// TODO continue this
+
 export type Comparator = (...args: any[]) => boolean
 
 export class BinaryTree<T> {
