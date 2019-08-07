@@ -14,3 +14,4 @@ Binary Tree<br />
 Priority Queue (Heap)<br />
 Queue<br />
 Stack<br />
+LinkedList
