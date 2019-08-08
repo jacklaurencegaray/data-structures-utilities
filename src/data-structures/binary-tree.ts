@@ -2,22 +2,45 @@
 
 export type Comparator = (...args: any[]) => boolean
 
-export class BinaryTree<T> {
-  left: BinaryTree<T>;
-  right: BinaryTree<T>;
-  data: T;
+export class BinaryTree {
+  left: BinaryTree;
+  right: BinaryTree;
+  data: number;
 
-  constructor(value: T) {
+  constructor(value) {
     this.data = value;
   }
   
-  insert(value: T) {
-    
+  insert(value) {
+    if (value <= this.data) {
+      if (this.left) {
+        this.left.insert(value)
+      } else {
+        this.left = new BinaryTree(value) 
+      }
+    } else if (value > this.data) {
+      if (this.right) {
+        this.right.insert(value) 
+      } else {
+        this.right = new BinaryTree(value) 
+      }
+    }
   }
   
-  static build(arr: T[], comparator: Comparator) {
+  search(value) {
+    if (this === null) return false 
+    if (this.data === value) return true
+    
+    if (value <= this.data) {
+      return this.left.search(value) 
+    } else if (value > this.data) {
+      return this.right.search(value) 
+    }
+  }
+  
+  static build(arr: number[], comparator: Comparator) {
      if (arr.length) {
-        const root = new BinaryTree<T>(arr[0]);
+        const root = new BinaryTree(arr[0]);
         arr.slice(1, arr.length).forEach(val => root.insert(val));
         return root;
      } else {
