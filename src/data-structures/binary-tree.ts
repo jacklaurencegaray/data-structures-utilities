@@ -11,6 +11,10 @@ export class BinaryTree {
     this.data = value;
   }
   
+  delete(value) {
+    // TODO 
+  }
+  
   insert(value) {
     if (value <= this.data) {
       if (this.left) {
