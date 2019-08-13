@@ -48,3 +48,16 @@ LinkedList.reverse = function(head) {
     }
     return prev
 }
+
+LinkedList.delete = function(head, value) {
+    let current = head
+    let prev
+    
+    while (current !== null) {
+        if (current.data === value) {
+            prev.next = current.next   
+        }
+        prev = current
+        current = current.next
+    }
+}
