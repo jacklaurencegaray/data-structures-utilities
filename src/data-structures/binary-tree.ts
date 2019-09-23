@@ -53,10 +53,6 @@ export class BinaryTree {
   }
   
   delete(value) {
-     // 1. Go to either of the two:
-       // Leftmost node of the right subtree (min of the bigger subtree)
-       // Rightmost node of the left subtree (max of the smaller subtree)
-    // 2. Swap the current node with `value` with the value of the selected node (in 1).
-    // 3. TODO: Continue this
+     
   }
 }
